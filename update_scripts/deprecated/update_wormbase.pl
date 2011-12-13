@@ -8,9 +8,9 @@
 
 use strict;
 BEGIN {
-    use constant WORMBASE => $ENV{WORMBASE}     || '/usr/local/wormbase';
+    use constant WORMBASE => $ENV{WORMBASE}     || '/usr/local/wormbase/wormbase';
     use constant ACEDB    => $ENV{ACEDB}        || '/usr/local/acedb';
-    use constant FTP_SITE => $ENV{WORMBASE_FTP} || '~ftp/pub/wormbase';
+    use constant FTP_SITE => $ENV{WORMBASE_FTP} || '/usr/local/ftp/pub/wormbase';
     use lib WORMBASE . '/lib';
 }
 
@@ -31,11 +31,11 @@ use constant MIRROR         => 1;  # copy from Sanger to tmp directory
 use constant MIRROR_CB      => 1;  # copy from dev.wormbase.org to tmp directory
 use constant UNTAR          => 1;  # unpack database
 use constant SKEL           => 1;  # add local users to database login
-use constant COPY_TO_FTP    => 1;  # copy mirrored files to FTP directories
+use constant COPY_TO_FTP    => 0;  # copy mirrored files to FTP directories
 use constant CHROMTABLE     => 0;  # dump CHROMOSOME*.html files  NO LONGER NEEDED
 use constant INTERPOLATED   => 0;  # dump interpolated positions  NO LONGER NEEDED
 use constant BLAST_NUC      => 1;  # create BLAST database for genome
-use constant BLAST_PEP      => 0;  #   "      "     "      "   wormpep
+use constant BLAST_PEP      => 1;  #   "      "     "      "   wormpep
 use constant BLAST_EST      => 1;  #   "      "     "      "   ESTs
 use constant BLAST_BRIG     => 1;  #   "      "     "      "   briggsae
 use constant GFFDB_LOAD     => 1;  # load the elegans GFF database
@@ -51,8 +51,8 @@ use constant DUMP_BRIEF_IDS => 0;  # create a file of concise descriptions for g
 use constant REMOVE_MIRRORED => 0; # remove mirrored data after copying to FTP site
 
 # change this if you have a mysql user and password
-use constant MYSQL_USER        => '';
-use constant MYSQL_PASS        => '';
+use constant MYSQL_USER        => 'root';
+use constant MYSQL_PASS        => 'acztcacn';
 
 # The locations of your WormBase and mirrored directories
 use constant HTML     => WORMBASE . '/html';

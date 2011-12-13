@@ -9,13 +9,13 @@ $HOST = 'localhost';
 $PORT  = 2005;
 
 # Acedb username and password
-$USERNAME = '';
-$PASSWORD = '';
+$USERNAME = 'acedb';
+$PASSWORD = 'acztcacn';
 
 # Location of the mysql databases
 $MYSQL_HOST = 'localhost';
 $MYSQL_USER = 'nobody';
-$MYSQL_PASS = '';
+$MYSQL_PASS = 'nobody';
 
 # turn on extra debugging code
 $DEBUG = 0;
@@ -33,7 +33,7 @@ $MIRROR      = '';
 $DEVELOPMENT = 0;       # 0 = false, 1 = true
 
 # Page caching.
-$CACHE = '/usr/local/wormbase/tmp/website-classic/cache';
+$CACHE = '/usr/local/wormbase/tmp/cache';
 
 # The following options control the location and
 # lifespan of acedb object caching.

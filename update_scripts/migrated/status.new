@@ -1,0 +1,10 @@
+<params>
+    START_NEW   1
+    VERBOSE   1
+    SPECIES   elegans
+    DIR   /media/My Passport/WS170/
+    LOG   /usr/local/wormbase/wormbase/update_scripts/migrated/logs.log
+    STATUS   /usr/local/wormbase/wormbase/update_scripts/migrated/status.new
+    CONFIG   /usr/local/wormbase/wormbase/update_scripts/migrated/update_wormbase-dev.cfg
+</params>
+STEP_ID   check_requirements:diskspace

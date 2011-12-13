@@ -7,13 +7,13 @@
 VERSION=$1
 CBVERSION=$2
 
-mkdir /usr/local/wormbase/update_scripts/logs/${VERSION}
+mkdir /usr/local/wormbase/wormbase/update_scripts/logs/${VERSION}
 
 echo "Updating C. elegans with ${VERSION}..."
 update_wormbase-dev.pl -start_new -mirror ${VERSION} \
--status /usr/local/wormbase/update_scripts/logs/${VERSION}/${VERSION}.status \
--config /usr/local/wormbase/update_scripts/update_wormbase-dev.cfg \
--log /usr/local/wormbase/update_scripts/logs/${VERSION}/${VERSION}.log \
+-status /usr/local/wormbase/wormbase/update_scripts/logs/${VERSION}/${VERSION}.status \
+-config /usr/local/wormbase/wormbase/update_scripts/update_wormbase-dev.cfg \
+-log /usr/local/wormbase/wormbase/update_scripts/logs/${VERSION}/${VERSION}.log \
 -species elegans
 echo "Finished updating C. elegans..."
 

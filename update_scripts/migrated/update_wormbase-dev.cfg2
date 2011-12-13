@@ -6,7 +6,7 @@
 <params>
 
 	# The root of all WormBase files	
-	WORMBASE		/usr/local/wormbase-devel/canaran
+	WORMBASE		/usr/local/wormbase/wormbase
 
 	# The BUILD_ROOT_DIR is where all data will be downloaded
 	LOCAL_FTP_ROOT_DIR      /usr/local/ftp/pub/wormbase
@@ -15,7 +15,7 @@
 	ACEDB_ROOT_DIR		/usr/local/acedb		        # ***CHECK***
 	ACEDB_ROOT_GROUP	acedb					# ***CHECK***
 
-	MYSQL_DATA_DIR			/usr/local/mysql		# ***CHECK***      
+	MYSQL_DATA_DIR			/var/lib/mysql			# ***CHECK***      
 
 	SCRIPT_DIR			$WORMBASE/update_scripts	# ***CHECK***
         DUMP_SCRIPT_DIR                 $SCRIPT_DIR/dump_scripts         
@@ -180,8 +180,8 @@ TACE_SCRIPT				tace
 		
 		# GFF DB CREATION - db access
 		
-		GFFDB_MYSQL_USER				todd	    #	[NONE] [NULL]          # ***CHECK***
-		GFFDB_MYSQL_PASS				kentwashere  #	[NONE] [NULL]          # ***CHECK***
+		GFFDB_MYSQL_USER				root	    #	[NONE] [NULL]          # ***CHECK***
+		GFFDB_MYSQL_PASS				acztcacn    #	[NONE] [NULL]          # ***CHECK***
 
 		# GFF DB CREATION - db loading
 		

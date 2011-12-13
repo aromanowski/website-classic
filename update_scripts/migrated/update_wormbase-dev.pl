@@ -598,7 +598,7 @@ sub do_untar {
 	
 	$m->lg("Installing Acedb directory");
 
-	_reset_dir($m, $dest, 'Acedb release directory') or return;
+#	_reset_dir($m, $dest, 'Acedb release directory') or return;
 	system("chgrp $acedb_grp $dest") and $m->lg("Cannot chgrp $dest to $acedb_grp: $!"), return;
 	system("chmod g+ws $dest") and $m->lg("Cannot chmod $dest to g+ws: $!"), return;
 

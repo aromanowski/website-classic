@@ -43,8 +43,8 @@
 // Groups that users belong to, each user should only be in one group,
 // The code will use the first group that it finds a user in.
 //
-admin: admin todd norie
-write: lstein todd norie
+admin: admin andres
+write: andres acedb
 
 //////////////////////////////////////////////////////////////////
 // users and passwords
@@ -52,6 +52,9 @@ write: lstein todd norie
 // new users are just added to the bottom of the file.
 // 
 //
-admin ed7e8fdf88358631fd14e3bb78507124
-todd 8807941050601de2781e1e169f808b37
-norie ed7e8fdf88358631fd14e3bb78507124
+admin 70654731edc932411f95e5edfc1b6130
+andres ff372dde34554a52ef6a2bf4b29f4475
+acedb e7e05b382e89c41216d0024ba407e143
+
+
+

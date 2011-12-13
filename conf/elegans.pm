@@ -10,7 +10,7 @@ $APPLICATION_ROOT = '/usr/local/wormbase';
 # Where all temp files shold be written
 $TMP_DIR = $APPLICATION_ROOT . "/tmp";
 
-$WORMBASE = '/usr/local/wormbase/website/classic';  # location of our stuff on filesystem
+$WORMBASE = '/usr/local/wormbase/wormbase';  # location of our stuff on filesystem
 $WB       = '';        # Prefix to append to URLs
 $ROOT     = "$WB/db";  # where the scripts live in URL space
 $CONF     = "$WORMBASE/conf";  # where the configuration files live
@@ -49,7 +49,7 @@ if ($USE_GBROWSE1) {
 #			      'cgh_allele'
 			      ],
 	     -user        => $MYSQL_USER || 'nobody',
-	     -pass        => $MYSQL_PASS || '',
+	     -pass        => $MYSQL_PASS || 'nobody',
 	     );
 
 
@@ -66,7 +66,7 @@ if ($USE_GBROWSE1) {
 			       'rna{exon/Transcript}'
 			       ],
 	      -user        => $MYSQL_USER || 'nobody',
-	      -pass        => $MYSQL_PASS || '',
+	      -pass        => $MYSQL_PASS || 'nobody',
 	      );
 
 
@@ -76,28 +76,28 @@ if ($USE_GBROWSE1) {
 	       -aggregators => ['wormbase_cds{coding_exon,three_prime_UTR,five_prime_UTR}','clone','alignment','waba_alignment'],
 #	       -aggregators => ['wormbase_cds{coding_exon,three_prime_UTR,five_primer_UTR/CDS}','clone','alignment','waba_alignment'],
 	       -user        => $MYSQL_USER || 'nobody',
-	       -pass        => $MYSQL_PASS || '',
+	       -pass        => $MYSQL_PASS || 'nobody',
 	       );
 
 @PMAPGFF    = (-adaptor     => 'dbi::mysqlace',
 	       -dsn         => "dbi:mysql:database=c_elegans_pmap;host=$MYSQL_HOST",
 	       -aggregators => [qw(wormbase_gene)],
 	       -user        => $MYSQL_USER || 'nobody',
-	       -pass        => $MYSQL_PASS || '',
+	       -pass        => $MYSQL_PASS || 'nobody',
 	       );
 
 @GMAPGFF    = (-adaptor     => 'dbi::mysqlace',
 	       -dsn         => "dbi:mysql:database=c_elegans_gmap;host=$MYSQL_HOST",
 	       -aggregators => [qw(wormbase_gene)],
 	       -user        => $MYSQL_USER || 'nobody',
-	       -pass        => $MYSQL_PASS || '',
+	       -pass        => $MYSQL_PASS || 'nobody',
 	       );
 
 $GMAPGFF_URL  = '/db/gb2/gbrowse/c_elegans_gmap/?name=%s';
 
 # ========= $STYLESHEET =========
 # stylesheet to use
-$STYLESHEET = "$WB/stylesheets/wormbase.css";
+$STYLESHEET = "$WORMBASE/html/stylesheets/wormbase.css";
 
 # Expression cartoons, previously hard-coded
 $WORMVIEW_IMAGE = "$WORMBASE/html/images/expression/assembled";
@@ -120,7 +120,9 @@ $MAX_IN_COLUMN = 100;
 
 # location of random pictures to display on certain pages
 $RANDOM_PICTS = "$WB/random_pic";
-$PIC_SCRIPT   = "$ROOT/misc/random_pic";
+
+#no se donde esta esto
+$PIC_SCRIPT   = "$ROOT/misc/random_pic"; 
 
 #pictures for win32 explorer-style drawing
 $MENU_OPEN    = '/images/menu-images/menu_corner_minus.gif';

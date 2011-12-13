@@ -1,0 +1,47 @@
+[timestamp-disabled] 
+[timestamp-disabled] ///////////////////////////////////////////////////////////////////////////////////////
+[timestamp-disabled] //////////////////////////////////////// START ////////////////////////////////////////
+[timestamp-disabled] ///////////////////////////////////////////////////////////////////////////////////////
+[timestamp-disabled] 
+[timestamp-disabled] Starting ...
+[timestamp-disabled] Working directory: /usr/local/wormbase/website-classic/update_scripts/migrated
+[timestamp-disabled] Command line: update_wormbase-dev.pl -start_new -dir /media/My Passport/WS170/ -status /usr/local/wormbase/wormbase/update_scripts/migrated/status.new -config /usr/local/wormbase/wormbase/update_scripts/migrated/update_wormbase-dev.cfg -log /usr/local/wormbase/wormbase/update_scripts/migrated/logs.log -species elegans -verbose
+[timestamp-disabled] 
+[timestamp-disabled] The following steps are going to be performed for this species:
+[timestamp-disabled] 
+[timestamp-disabled] 		STEP:check_requirements:diskspace
+[timestamp-disabled] 		STEP:check_requirements:write_to_dirs
+[timestamp-disabled] 		STEP:retrieve_build
+[timestamp-disabled] 		STEP:do_untar
+[timestamp-disabled] 		STEP:do_customize
+[timestamp-disabled] 		STEP:create_directories
+[timestamp-disabled] 		STEP:install_ontology_files
+[timestamp-disabled] 		STEP:dump_sequences:nucl
+[timestamp-disabled] 		STEP:make_blastdb:nucl
+[timestamp-disabled] 		STEP:dump_sequences:ests
+[timestamp-disabled] 		STEP:make_blastdb:ests
+[timestamp-disabled] 		STEP:dump_sequences:prot_cb
+[timestamp-disabled] 		STEP:make_blastdb:prot_cb
+[timestamp-disabled] 		STEP:load_epcr
+[timestamp-disabled] 		STEP:load_gffdb:main
+[timestamp-disabled] 		STEP:load_gffdb:pmap
+[timestamp-disabled] 		STEP:load_gffdb:briggsae
+[timestamp-disabled] 		STEP:add_patch
+[timestamp-disabled] 		STEP:build_autocomplete_db
+[timestamp-disabled] 		STEP:dump_features:functional_desc
+[timestamp-disabled] 		STEP:dump_features:swissprot
+[timestamp-disabled] 		STEP:dump_features:go
+[timestamp-disabled] 		STEP:dump_features:gi
+[timestamp-disabled] 		STEP:copy_release_notes
+[timestamp-disabled] 		STEP:archive_files
+[timestamp-disabled] 		STEP:update_symbolic_links:ftp
+[timestamp-disabled] 		STEP:update_symbolic_links:acedb
+[timestamp-disabled] 
+[timestamp-disabled] [check_requirements:diskspace] Checking for requirements
+[timestamp-disabled] [check_requirements:diskspace] 
+[timestamp-disabled] [check_requirements:diskspace] This step (STEP:check_requirements:diskspace) has *NOT* been completed before, proceeding ...
+[timestamp-disabled] [check_requirements:diskspace] 
+[timestamp-disabled] [check_requirements:diskspace] No data will be downloaded, skipping 'BUILD_ROOT_DIR' for diskspace requirement check
+[timestamp-disabled] [check_requirements:diskspace] WARNING: System has only 8.94 GB available and *does not* meet the total diskspace requirement (10.55 GB) for the following component(s): WORMBASE:/usr/local/wormbase ACEDB_ROOT_DIR:/usr/local/acedb MYSQL_DATA_DIR:/var/lib/mysql
+[timestamp-disabled] [check_requirements:diskspace] Checking for requirements failed!
+[timestamp-disabled] [check_requirements:diskspace] FATAL ERROR: Cannot perform step (check_requirements:diskspace), please check log file for details and re-start

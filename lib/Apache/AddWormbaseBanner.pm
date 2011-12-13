@@ -36,7 +36,7 @@ sub handler {
 	warn "internal request";
 	$r->internal_redirect($r->uri . 'index.html');
 	return OK;
-    }
+   }
 
 
   # We only want to serve text, xml, or directory content
